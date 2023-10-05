@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Task Manager </title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="https://kit.fontawesome.com/9f767eca8f.js" crossorigin="anonymous"></script>
+        <script defer src="main.js"></script>
+    </head>
+    <body>
+        <header>
+          
+        </header>
+        <div class="container">
+            <div class="container__header">
+                <br>
+                <img src="logo.png" id="logo" alt="JS logo">
+                <div class="container__title">
+                    <h1>Student Task Manager</name></h1>
+                    <h3>Name: Student</h3>
+                    <h3>Date: <date>August 30th, 2023</date></h3>
+                </div>
+            </div>
+            <div class="container__task-system">
+                <nav>
+                    <li data-nav-list class="active">All tasks</li>
+                    <li data-nav-list>University</li>
+                    <li data-nav-list>Job</li>
+                    <li data-nav-list>House</li>
+                    <li data-nav-list>Home-Work</li>
+                    <li data-nav-list>Gym</li>
+                </nav>
+                <div class="task-system__task-list">
+                    <button class="task-list__add-task">
+                        <i class="fas fa-pencil-alt pencil-icon"></i> Add task
+                    </button>
+                    <div class="task-list__empty-item">
+                        <i class="fas fa-plus fa-7x"></i><br><br>
+                        Click the 'Add task' button to enter an entry
+                    </div>
+                </div>
+                <div class="task__modal-box">
+                    <div class="task__modal-content">
+                        <div class="task__modal-header">
+                            Enter task details
+                            <div class="close">&times</div>
+                        </div>
+                        <div class="task__add-task">
+                            <div class="add-task__task-image"></div>  
+                            <div class="add-task__input-form">
+                                <label for="task-name">Enter name</label><br>
+                                <input name="name" type="text" id="task-name" placeholder="Name of task" required><br>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script src="dist/bundle.js"></script>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+                                <label for="task-genre">Choose genre</label><br>
+                                <select name="genre" id="task-genre">
+                                    <option value="None">--Select a genre--</option>
+                                    <option value="University">University</option>
+                                    <option value="Job">Job</option>
+                                    <option value="House">House</option>
+                                    <option value="Home-Work">Home-Work</option>
+                                    <option value="Gym">Gym</option>
+                                </select><br>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+                                <label for="task-rating">Enter Value</label><br>
+                                <select name="rating" id="task-rating">
+                                    <option value="None">--Choose Value--</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select><br>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+                                <label for="task-description">Enter description</label><br>
+                                <textarea name="description" id="task-description" placeholder="Description or summary of the task"></textarea><br>
+
+                                <input type="submit" id="add-task" value="Add task">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

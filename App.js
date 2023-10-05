@@ -1,15 +1,23 @@
-import MyButton from "./mybotton";
-import Product from "./product";
+import logo from './logo.svg';
+import './style.css';
 
 function App() {
-  return (<div>
-    <h1>Welcome to QH640 web application module</h1>
-    <h2>Week-01-Seminar</h2>
-
-    <MyButton />
-    
-    <Product />
-    
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
